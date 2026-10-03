@@ -14,6 +14,11 @@ import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 
 import { routes } from './app.routes';
 
+// Imports para poder simular las operaciones con datos usando json.server
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { API_URL } from './core/api.config';
+
+
 registerLocaleData(localeEsMx);
 
 export const appConfig: ApplicationConfig = {
@@ -28,6 +33,10 @@ export const appConfig: ApplicationConfig = {
       withHashLocation(),
       withInMemoryScrolling({ scrollPositionRestoration: 'top' }),
     ),
+    // HttpClient para consumir la API REST
+    provideHttpClient(withFetch()),
+    { provide: API_URL, useValue: 'http://localhost:3000' },
+
     { provide: LOCALE_ID, useValue: 'es-MX' },
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { horizontalPosition: 'end', verticalPosition: 'bottom' } },
     // mat-icon usa la fuente Material Symbols Outlined (paquete npm material-symbols)

@@ -1,0 +1,524 @@
+{
+    "solicitudes": [
+        {
+            "id": "ASE-2026-0001",
+            "folio": "ASE-2026-0001",
+            "materia": "Estructuras de Datos",
+            "tema": "Árboles binarios",
+            "profesorId": "ana",
+            "estudiante": {
+                "nombre": "Daniela Hernández",
+                "programa": "Lic. en Ciencias de la Computación",
+                "semestre": "3er semestre"
+            },
+            "fechaHora": "2026-10-12T10:00",
+            "modalidad": "Presencial",
+            "ubicacion": "Edificio CCO1, cubículo 214",
+            "estado": "Confirmada",
+            "descripcion": "Necesito revisar el recorrido en preorden y la eliminación de nodos.",
+            "adjunto": {
+                "nombre": "ejercicio_arboles.pdf",
+                "tamano": "1.2 MB"
+            },
+            "historial": [
+                {
+                    "estado": "Pendiente",
+                    "fecha": "2026-10-08T13:42",
+                    "detalle": "Solicitud enviada"
+                },
+                {
+                    "estado": "Confirmada",
+                    "fecha": "2026-10-08T15:10",
+                    "detalle": "La profesora confirmó el horario"
+                }
+            ]
+        },
+        {
+            "id": "ASE-2026-0002",
+            "folio": "ASE-2026-0002",
+            "materia": "Bases de Datos",
+            "tema": "Normalización",
+            "profesorId": "elena",
+            "estudiante": {
+                "nombre": "Daniela Hernández",
+                "programa": "Lic. en Ciencias de la Computación",
+                "semestre": "3er semestre"
+            },
+            "fechaHora": "2026-10-13T09:00",
+            "modalidad": "Presencial",
+            "ubicacion": "Edificio CCO2, cubículo 108",
+            "estado": "Pendiente",
+            "descripcion": "Tengo dudas para llevar un modelo a tercera forma normal.",
+            "historial": [
+                {
+                    "estado": "Pendiente",
+                    "fecha": "2026-10-09T09:18",
+                    "detalle": "Solicitud enviada"
+                }
+            ]
+        },
+        {
+            "id": "ASE-2026-0003",
+            "folio": "ASE-2026-0003",
+            "materia": "Programación Básica",
+            "tema": "Punteros en C",
+            "profesorId": "marco",
+            "estudiante": {
+                "nombre": "Daniela Hernández",
+                "programa": "Lic. en Ciencias de la Computación",
+                "semestre": "3er semestre"
+            },
+            "fechaHora": "2026-10-05T12:30",
+            "modalidad": "En línea",
+            "ubicacion": "meet.universidad.mx/asesoria",
+            "estado": "Completada",
+            "descripcion": "Repaso de aritmética de punteros.",
+            "historial": [
+                {
+                    "estado": "Pendiente",
+                    "fecha": "2026-10-01T10:05",
+                    "detalle": "Solicitud enviada"
+                },
+                {
+                    "estado": "Confirmada",
+                    "fecha": "2026-10-01T11:20",
+                    "detalle": "El profesor confirmó el horario"
+                },
+                {
+                    "estado": "Completada",
+                    "fecha": "2026-10-05T13:15",
+                    "detalle": "Asesoría registrada como completada"
+                }
+            ]
+        },
+        {
+            "id": "ASE-2026-0004",
+            "folio": "ASE-2026-0004",
+            "materia": "Estructuras de Datos",
+            "tema": "Recursividad y casos base",
+            "profesorId": "ana",
+            "estudiante": {
+                "nombre": "Luis Mendoza Rivera",
+                "programa": "Lic. en Ciencias de la Computación",
+                "semestre": "3er semestre"
+            },
+            "fechaHora": "2026-10-12T16:00",
+            "modalidad": "Presencial",
+            "ubicacion": "Edificio CCO1, cubículo 214",
+            "estado": "Pendiente",
+            "descripcion": "Mi función recursiva para calcular Fibonacci no termina; creo que el caso base está mal planteado.",
+            "adjunto": {
+                "nombre": "fibonacci.c",
+                "tamano": "3 KB"
+            },
+            "historial": [
+                {
+                    "estado": "Pendiente",
+                    "fecha": "2026-10-11T19:40",
+                    "detalle": "Solicitud enviada"
+                }
+            ]
+        },
+        {
+            "id": "ASE-2026-0005",
+            "folio": "ASE-2026-0005",
+            "materia": "Programación Básica",
+            "tema": "Listas enlazadas",
+            "profesorId": "ana",
+            "estudiante": {
+                "nombre": "Mariana López Cruz",
+                "programa": "Ing. en Tecnologías de la Información",
+                "semestre": "1er semestre"
+            },
+            "fechaHora": "2026-10-14T10:00",
+            "modalidad": "En línea",
+            "ubicacion": "El enlace se enviará al confirmar",
+            "estado": "Pendiente",
+            "descripcion": "No entiendo cómo insertar un nodo al inicio sin perder la referencia al resto de la lista.",
+            "historial": [
+                {
+                    "estado": "Pendiente",
+                    "fecha": "2026-10-12T08:05",
+                    "detalle": "Solicitud enviada"
+                }
+            ]
+        },
+        {
+            "id": "ASE-2026-0006",
+            "folio": "ASE-2026-0006",
+            "materia": "Estructuras de Datos",
+            "tema": "Árboles AVL",
+            "profesorId": "ana",
+            "estudiante": {
+                "nombre": "Jorge Ramírez Soto",
+                "programa": "Ing. en Ciencias de la Computación",
+                "semestre": "3er semestre"
+            },
+            "fechaHora": "2026-10-13T09:00",
+            "modalidad": "Presencial",
+            "ubicacion": "Edificio CCO1, cubículo 214",
+            "estado": "Reprogramación propuesta",
+            "horarioPropuesto": "2026-10-15T12:30",
+            "descripcion": "Quiero repasar las rotaciones dobles antes del examen parcial.",
+            "historial": [
+                {
+                    "estado": "Pendiente",
+                    "fecha": "2026-10-10T12:15",
+                    "detalle": "Solicitud enviada"
+                },
+                {
+                    "estado": "Reprogramación propuesta",
+                    "fecha": "2026-10-11T10:02",
+                    "detalle": "La docente propuso el jue 15 oct, 12:30 h"
+                }
+            ]
+        },
+        {
+            "id": "ASE-2026-0007",
+            "folio": "ASE-2026-0007",
+            "materia": "Estructuras de Datos",
+            "tema": "Pilas y colas",
+            "profesorId": "ana",
+            "estudiante": {
+                "nombre": "Luis Mendoza Rivera",
+                "programa": "Lic. en Ciencias de la Computación",
+                "semestre": "3er semestre"
+            },
+            "fechaHora": "2026-10-07T11:00",
+            "modalidad": "Presencial",
+            "ubicacion": "Edificio CCO1, cubículo 214",
+            "estado": "Completada",
+            "descripcion": "Implementación de una cola circular con arreglos.",
+            "historial": [
+                {
+                    "estado": "Pendiente",
+                    "fecha": "2026-10-05T09:00",
+                    "detalle": "Solicitud enviada"
+                },
+                {
+                    "estado": "Confirmada",
+                    "fecha": "2026-10-05T12:00",
+                    "detalle": "La docente confirmó el horario"
+                },
+                {
+                    "estado": "Completada",
+                    "fecha": "2026-10-07T11:50",
+                    "detalle": "Asesoría registrada como completada"
+                }
+            ]
+        }
+    ],
+    "profesores": [
+        {
+            "id": "ana",
+            "nombre": "Dra. Ana Torres Ruiz",
+            "iniciales": "AT",
+            "grado": "Doctorado en Ciencias de la Computación",
+            "materias": [
+                "Estructuras de Datos",
+                "Programación Básica"
+            ],
+            "temas": [
+                "recursividad",
+                "punteros en C",
+                "listas enlazadas",
+                "árboles"
+            ],
+            "modalidades": [
+                "Presencial",
+                "En línea"
+            ],
+            "ubicacion": "Edificio CCO1, cubículo 214",
+            "color": "avatar-blue",
+            "patron": [
+                {
+                    "dia": 1,
+                    "horas": [
+                        "09:00",
+                        "10:00",
+                        "11:30",
+                        "16:00"
+                    ]
+                },
+                {
+                    "dia": 2,
+                    "horas": [
+                        "09:00",
+                        "12:00",
+                        "15:30",
+                        "17:00"
+                    ]
+                },
+                {
+                    "dia": 3,
+                    "horas": [
+                        "10:00",
+                        "11:00",
+                        "13:00",
+                        "16:30"
+                    ]
+                },
+                {
+                    "dia": 4,
+                    "horas": [
+                        "09:30",
+                        "12:30",
+                        "14:00",
+                        "17:00"
+                    ]
+                },
+                {
+                    "dia": 5,
+                    "horas": [
+                        "10:00",
+                        "12:00",
+                        "15:00"
+                    ]
+                }
+            ],
+            "ocupados": [
+                "2026-10-12T11:30",
+                "2026-10-13T15:30",
+                "2026-10-14T13:00",
+                "2026-10-15T09:30",
+                "2026-10-15T17:00",
+                "2026-10-16T12:00"
+            ]
+        },
+        {
+            "id": "marco",
+            "nombre": "Dr. Marco Salgado Pérez",
+            "iniciales": "MS",
+            "grado": "Doctorado en Ingeniería de Software",
+            "materias": [
+                "Programación Orientada a Objetos II",
+                "Estructuras de Datos"
+            ],
+            "temas": [
+                "herencia y polimorfismo",
+                "árboles",
+                "recursividad"
+            ],
+            "modalidades": [
+                "En línea"
+            ],
+            "ubicacion": "Enlace de videollamada",
+            "color": "avatar-green",
+            "patron": [
+                {
+                    "dia": 1,
+                    "horas": [
+                        "12:30",
+                        "17:00"
+                    ]
+                },
+                {
+                    "dia": 3,
+                    "horas": [
+                        "12:30",
+                        "17:00"
+                    ]
+                },
+                {
+                    "dia": 5,
+                    "horas": [
+                        "09:00"
+                    ]
+                }
+            ],
+            "ocupados": [
+                "2026-10-14T17:00"
+            ]
+        },
+        {
+            "id": "elena",
+            "nombre": "Mtra. Elena Vargas Luna",
+            "iniciales": "EV",
+            "grado": "Maestría en Ciencias de la Computación",
+            "materias": [
+                "Bases de Datos",
+                "Aplicaciones Web"
+            ],
+            "temas": [
+                "normalización",
+                "SQL",
+                "consumo de APIs REST"
+            ],
+            "modalidades": [
+                "Presencial"
+            ],
+            "ubicacion": "Edificio CCO2, cubículo 108",
+            "color": "avatar-purple",
+            "patron": [
+                {
+                    "dia": 2,
+                    "horas": [
+                        "09:00",
+                        "11:00"
+                    ]
+                },
+                {
+                    "dia": 4,
+                    "horas": [
+                        "09:00",
+                        "11:00",
+                        "13:00"
+                    ]
+                }
+            ],
+            "ocupados": []
+        },
+        {
+            "id": "raul",
+            "nombre": "Dr. Raúl Ortega Cruz",
+            "iniciales": "RO",
+            "grado": "Doctorado en Sistemas Computacionales",
+            "materias": [
+                "Ingeniería de Software I",
+                "Aplicaciones Web"
+            ],
+            "temas": [
+                "diagramas UML",
+                "arquitectura web",
+                "pruebas"
+            ],
+            "modalidades": [
+                "Presencial",
+                "En línea"
+            ],
+            "ubicacion": "Edificio CCO1, cubículo 306",
+            "color": "avatar-orange",
+            "patron": [
+                {
+                    "dia": 2,
+                    "horas": [
+                        "16:00"
+                    ]
+                },
+                {
+                    "dia": 4,
+                    "horas": [
+                        "16:00",
+                        "18:00"
+                    ]
+                },
+                {
+                    "dia": 5,
+                    "horas": [
+                        "10:00"
+                    ]
+                }
+            ],
+            "ocupados": []
+        },
+        {
+            "id": "ivan",
+            "nombre": "Mtro. Iván Rosales Gil",
+            "iniciales": "IR",
+            "grado": "Maestría en Matemáticas Aplicadas",
+            "materias": [
+                "Matemáticas Discretas",
+                "Cálculo Diferencial"
+            ],
+            "temas": [
+                "inducción matemática",
+                "límites",
+                "lógica"
+            ],
+            "modalidades": [
+                "En línea"
+            ],
+            "ubicacion": "Enlace de videollamada",
+            "color": "avatar-teal",
+            "patron": [
+                {
+                    "dia": 3,
+                    "horas": [
+                        "11:00",
+                        "12:00"
+                    ]
+                },
+                {
+                    "dia": 5,
+                    "horas": [
+                        "11:00",
+                        "12:00"
+                    ]
+                }
+            ],
+            "ocupados": []
+        },
+        {
+            "id": "sofia",
+            "nombre": "Dra. Sofía Navarro Lara",
+            "iniciales": "SN",
+            "grado": "Doctorado en Ciencias de la Información",
+            "materias": [
+                "Bases de Datos",
+                "Ingeniería de Software I"
+            ],
+            "temas": [
+                "modelo entidad-relación",
+                "normalización",
+                "diagramas UML"
+            ],
+            "modalidades": [
+                "Presencial"
+            ],
+            "ubicacion": "Edificio CCO2, cubículo 220",
+            "color": "avatar-pink",
+            "patron": [],
+            "ocupados": []
+        }
+    ],
+    "materias": [
+        {
+            "nombre": "Programación Básica",
+            "area": "Programación",
+            "icono": "code",
+            "semestre": "1er semestre"
+        },
+        {
+            "nombre": "Programación Orientada a Objetos II",
+            "area": "Programación",
+            "icono": "deployed_code",
+            "semestre": "3er semestre"
+        },
+        {
+            "nombre": "Estructuras de Datos",
+            "area": "Programación",
+            "icono": "account_tree",
+            "semestre": "3er semestre"
+        },
+        {
+            "nombre": "Bases de Datos",
+            "area": "Sistemas de información",
+            "icono": "database",
+            "semestre": "4.º semestre"
+        },
+        {
+            "nombre": "Ingeniería de Software I",
+            "area": "Ingeniería de software",
+            "icono": "schema",
+            "semestre": "5.º semestre"
+        },
+        {
+            "nombre": "Aplicaciones Web",
+            "area": "Ingeniería de software",
+            "icono": "language",
+            "semestre": "5.º semestre"
+        },
+        {
+            "nombre": "Matemáticas Discretas",
+            "area": "Matemáticas",
+            "icono": "function",
+            "semestre": "2.º semestre"
+        },
+        {
+            "nombre": "Cálculo Diferencial",
+            "area": "Matemáticas",
+            "icono": "show_chart",
+            "semestre": "1er semestre"
+        }
+    ]
+}
