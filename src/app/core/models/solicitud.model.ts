@@ -34,8 +34,8 @@ export interface Solicitud {
   descripcion: string;
   adjunto?: Adjunto;
   /** null cuando la API borra el campo. */
-  horarioPropuesto?: string;
-  motivoRechazo?: string;
+  horarioPropuesto?: string | null;
+  motivoRechazo?: string | null;
   historial: EventoHistorial[];
 }
 

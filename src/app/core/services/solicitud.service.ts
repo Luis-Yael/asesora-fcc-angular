@@ -119,7 +119,14 @@ export class SolicitudService {
       adjunto: datos.adjunto,
       historial: [{ estado: 'Pendiente', fecha: this.reloj.ahora(), detalle: 'Solicitud enviada al docente' }],
     };
+
+    // La interfaz se actualiza de inmediato y la API guarda el registro (POST).
     this.lista.update((actual) => [nueva, ...actual]);
+    //Registrar nueva solicitud
+    this.http.post<Solicitud>(this.url, nueva).subscribe({
+      error: () => this.fallo('No se pudo registrar la solicitud en el servidor.'),
+    });
+
     this.notificaciones.agregar({
       rol: 'profesor', tipo: 'solicitud', titulo: 'Nueva solicitud de asesoría',
       texto: `${nueva.estudiante.nombre} solicita apoyo con ${nueva.tema}.`, destino: '/profesor/solicitudes',
@@ -184,16 +191,27 @@ export class SolicitudService {
     this.avisarEstudiante(folio, 'Se registró una inasistencia');
   }
 
-  // ---------------------------------------------------------------------
-
+  /**
+   * Cambia el estado en la interfaz y lo guarda en la API con PATCH.
+   * Solo se envían los campos que cambian; un campo que se borra viaja como null.
+   */
   private cambiarEstado(folio: string, estado: EstadoSolicitud, detalle: string, cambios: Partial<Solicitud> = {}): void {
-    this.lista.update((actual) =>
-      actual.map((s) =>
-        s.folio === folio
-          ? { ...s, ...cambios, estado, historial: [...s.historial, { estado, fecha: this.reloj.ahora(), detalle }] }
-          : s,
-      ),
-    );
+    const actual = this.porFolio(folio);
+    if (!actual) return;
+    const historial = [...actual.historial, { estado, fecha: this.reloj.ahora(), detalle }];
+    this.lista.update((lista) => lista.map((s) => (s.folio === folio ? { ...s, ...cambios, estado, historial } : s)));
+
+    const cuerpo: Record<string, unknown> = { estado, historial };
+    for (const [campo, valor] of Object.entries(cambios)) cuerpo[campo] = valor ?? null;
+    this.http.patch<Solicitud>(`${this.url}/${folio}`, cuerpo).subscribe({
+      error: () => this.fallo('No se pudo guardar el cambio en el servidor.'),
+    });
+  }
+
+  /** Si la API falla, se avisa y se vuelve a cargar lo que realmente quedó guardado. */
+  private fallo(mensaje: string): void {
+    this.aviso.error(`${mensaje} Revisa que json-server esté encendido.`);
+    this.cargar();
   }
 
   private avisarEstudiante(folio: string, titulo: string): void {
