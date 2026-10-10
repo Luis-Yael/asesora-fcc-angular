@@ -76,3 +76,10 @@ a.subject-card, button.subject-card { color: inherit; text-decoration: none; }
 .subject-grid.row, .dashboard-grid.row, .metric-grid.row, .teacher-grid.row { gap: 0; }
 .filters fieldset + fieldset { margin-top: 8px; }
 .weekday > .btn-text { white-space: nowrap; justify-self: end; }
+
+// Aviso de error de conexión con la API
+.api-error { display: flex; align-items: center; gap: 14px; margin: 24px auto 0; width: min(100% - 48px, 1192px);
+  padding: 14px 18px; border-radius: var(--radius); color: var(--danger); background: var(--danger-soft); }
+.api-error div { flex: 1; display: grid; gap: 3px; }
+.api-error span { color: #6f2925; font-size: .85rem; }
+.api-error code { background: white; border-radius: 4px; padding: 1px 6px; color: var(--primary); }

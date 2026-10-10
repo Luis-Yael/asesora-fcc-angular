@@ -19,6 +19,8 @@ export interface Estudiante {
 }
 
 export interface Solicitud {
+  /** Identificador que usa la API (json-server lo exige). Es igual al folio. */
+  id: string;
   folio: string;
   materia: string;
   tema: string;
@@ -31,6 +33,7 @@ export interface Solicitud {
   estado: EstadoSolicitud;
   descripcion: string;
   adjunto?: Adjunto;
+  /** null cuando la API borra el campo. */
   horarioPropuesto?: string;
   motivoRechazo?: string;
   historial: EventoHistorial[];

@@ -88,8 +88,16 @@ interface ElementoMenu {
     </nav>
 
     <main class="main-content" id="contenido" tabindex="-1">
-      @if (navegando()) { <app-carga /> }
-      <div [hidden]="navegando()"><router-outlet /></div>
+      @if (conexion() === 'error') {
+        <div class="api-error" role="alert">
+          <mat-icon class="icon">cloud_off</mat-icon>
+          <div><strong>No se pudo conectar con la API</strong>
+            <span>Verifica que json-server esté encendido con <code>npm run api</code> en otra terminal.</span></div>
+          <button type="button" class="btn btn-secondary" (click)="reintentar()">Reintentar</button>
+        </div>
+      }
+      @if (navegando() || conexion() === 'cargando') { <app-carga /> }
+      <div [hidden]="navegando() || conexion() === 'cargando'"><router-outlet /></div>
     </main>
   `,
   styles: `
@@ -120,6 +128,7 @@ export class MarcoAplicacionComponent {
   protected readonly menu = computed(() => (this.sesion.esEstudiante() ? this.menuEstudiante : this.menuProfesor));
   protected readonly noLeidas = computed(() => this.notificaciones.noLeidas(this.sesion.rol()));
   protected readonly pendientes = this.solicitudes.pendientesProfesor;
+  protected readonly conexion = this.solicitudes.conexion;
 
   /** true mientras el router descarga una pantalla diferida. */
   protected readonly navegando = toSignal(
@@ -135,6 +144,10 @@ export class MarcoAplicacionComponent {
     this.router.navigateByUrl(this.sesion.inicioDe(rol));
   }
 
+  protected reintentar(): void {
+    this.solicitudes.cargar();
+  }
+  
   protected irAContenido(): void {
     document.getElementById('contenido')?.focus();
   }

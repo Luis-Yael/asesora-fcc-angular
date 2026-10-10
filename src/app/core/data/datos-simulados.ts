@@ -1,4 +1,4 @@
-import { Estudiante, Materia, Notificacion, Profesor, Solicitud } from '../models';
+import { Estudiante, Materia, Notificacion, Profesor } from '../models';
 
 /**
  * Datos simulados del prototipo.
@@ -105,78 +105,7 @@ export const ESTUDIANTE_ACTUAL: Estudiante = {
 /** Profesora con la que se recorre el prototipo. */
 export const PROFESOR_ACTUAL_ID = 'ana';
 
-const LUIS: Estudiante = { nombre: 'Luis Mendoza Rivera', programa: 'Lic. en Ciencias de la Computación', semestre: '3er semestre' };
-const MARIANA: Estudiante = { nombre: 'Mariana López Cruz', programa: 'Ing. en Tecnologías de la Información', semestre: '1er semestre' };
-const JORGE: Estudiante = { nombre: 'Jorge Ramírez Soto', programa: 'Ing. en Ciencias de la Computación', semestre: '3er semestre' };
-
-export const SOLICITUDES_INICIALES: Solicitud[] = [
-  {
-    folio: 'ASE-2026-0001', materia: 'Estructuras de Datos', tema: 'Árboles binarios', profesorId: 'ana',
-    estudiante: ESTUDIANTE_ACTUAL, fechaHora: '2026-10-12T10:00', modalidad: 'Presencial',
-    ubicacion: 'Edificio CCO1, cubículo 214', estado: 'Confirmada',
-    descripcion: 'Necesito revisar el recorrido en preorden y la eliminación de nodos.',
-    adjunto: { nombre: 'ejercicio_arboles.pdf', tamano: '1.2 MB' },
-    historial: [
-      { estado: 'Pendiente', fecha: '2026-10-08T13:42', detalle: 'Solicitud enviada' },
-      { estado: 'Confirmada', fecha: '2026-10-08T15:10', detalle: 'La profesora confirmó el horario' },
-    ],
-  },
-  {
-    folio: 'ASE-2026-0002', materia: 'Bases de Datos', tema: 'Normalización', profesorId: 'elena',
-    estudiante: ESTUDIANTE_ACTUAL, fechaHora: '2026-10-13T09:00', modalidad: 'Presencial',
-    ubicacion: 'Edificio CCO2, cubículo 108', estado: 'Pendiente',
-    descripcion: 'Tengo dudas para llevar un modelo a tercera forma normal.',
-    historial: [{ estado: 'Pendiente', fecha: '2026-10-09T09:18', detalle: 'Solicitud enviada' }],
-  },
-  {
-    folio: 'ASE-2026-0003', materia: 'Programación Básica', tema: 'Punteros en C', profesorId: 'marco',
-    estudiante: ESTUDIANTE_ACTUAL, fechaHora: '2026-10-05T12:30', modalidad: 'En línea',
-    ubicacion: 'meet.universidad.mx/asesoria', estado: 'Completada',
-    descripcion: 'Repaso de aritmética de punteros.',
-    historial: [
-      { estado: 'Pendiente', fecha: '2026-10-01T10:05', detalle: 'Solicitud enviada' },
-      { estado: 'Confirmada', fecha: '2026-10-01T11:20', detalle: 'El profesor confirmó el horario' },
-      { estado: 'Completada', fecha: '2026-10-05T13:15', detalle: 'Asesoría registrada como completada' },
-    ],
-  },
-  {
-    folio: 'ASE-2026-0004', materia: 'Estructuras de Datos', tema: 'Recursividad y casos base', profesorId: 'ana',
-    estudiante: LUIS, fechaHora: '2026-10-12T16:00', modalidad: 'Presencial',
-    ubicacion: 'Edificio CCO1, cubículo 214', estado: 'Pendiente',
-    descripcion: 'Mi función recursiva para calcular Fibonacci no termina; creo que el caso base está mal planteado.',
-    adjunto: { nombre: 'fibonacci.c', tamano: '3 KB' },
-    historial: [{ estado: 'Pendiente', fecha: '2026-10-11T19:40', detalle: 'Solicitud enviada' }],
-  },
-  {
-    folio: 'ASE-2026-0005', materia: 'Programación Básica', tema: 'Listas enlazadas', profesorId: 'ana',
-    estudiante: MARIANA, fechaHora: '2026-10-14T10:00', modalidad: 'En línea',
-    ubicacion: 'El enlace se enviará al confirmar', estado: 'Pendiente',
-    descripcion: 'No entiendo cómo insertar un nodo al inicio sin perder la referencia al resto de la lista.',
-    historial: [{ estado: 'Pendiente', fecha: '2026-10-12T08:05', detalle: 'Solicitud enviada' }],
-  },
-  {
-    folio: 'ASE-2026-0006', materia: 'Estructuras de Datos', tema: 'Árboles AVL', profesorId: 'ana',
-    estudiante: JORGE, fechaHora: '2026-10-13T09:00', modalidad: 'Presencial',
-    ubicacion: 'Edificio CCO1, cubículo 214', estado: 'Reprogramación propuesta',
-    horarioPropuesto: '2026-10-15T12:30',
-    descripcion: 'Quiero repasar las rotaciones dobles antes del examen parcial.',
-    historial: [
-      { estado: 'Pendiente', fecha: '2026-10-10T12:15', detalle: 'Solicitud enviada' },
-      { estado: 'Reprogramación propuesta', fecha: '2026-10-11T10:02', detalle: 'La docente propuso el jue 15 oct, 12:30 h' },
-    ],
-  },
-  {
-    folio: 'ASE-2026-0007', materia: 'Estructuras de Datos', tema: 'Pilas y colas', profesorId: 'ana',
-    estudiante: LUIS, fechaHora: '2026-10-07T11:00', modalidad: 'Presencial',
-    ubicacion: 'Edificio CCO1, cubículo 214', estado: 'Completada',
-    descripcion: 'Implementación de una cola circular con arreglos.',
-    historial: [
-      { estado: 'Pendiente', fecha: '2026-10-05T09:00', detalle: 'Solicitud enviada' },
-      { estado: 'Confirmada', fecha: '2026-10-05T12:00', detalle: 'La docente confirmó el horario' },
-      { estado: 'Completada', fecha: '2026-10-07T11:50', detalle: 'Asesoría registrada como completada' },
-    ],
-  },
-];
+// Las solicitudes ahora viven en db.json y se consultan con la API (json-server).
 
 export const NOTIFICACIONES_INICIALES: Notificacion[] = [
   { id: 1, rol: 'estudiante', tipo: 'estado', titulo: 'Tu asesoría fue confirmada',
